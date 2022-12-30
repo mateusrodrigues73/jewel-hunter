@@ -58,7 +58,7 @@ const init = async() => {
   jewel = new Jewel(410, 200, 12, 5, 30, 30, jewelImage, frames);
 
   enemies = enemies.map (
-    i => new Enemy(
+    i => new Enemy (
       Math.random() * ((limits.width - 80) - 30 ) + 30, 
       30, 
       20, 
@@ -100,7 +100,7 @@ const start = () => {
 
     hud(context, restartMessage, 'lightgreen', limits.height / 2);
 
-    if(key == 'Enter') {
+    if (key == 'Enter') {
       theme.currentTime = 0;
       theme.play();
       clearInterval(startInterval);
@@ -115,6 +115,8 @@ const loopAnimation = () => {
   setTimeout(() => {
     context.drawImage(background, 0, 0, limits.width, limits.height);
 
+    jewel.draw(context);
+
     enemies.forEach(e => {
       e.move(limits);
       e.draw(context);
@@ -123,7 +125,6 @@ const loopAnimation = () => {
 
     hero.move(limits, key);
 		hero.draw(context);
-    jewel.draw(context);
 
     if (jewel.colision(hero.hurtbox)) {
       jewel.x = Math.floor(Math.random() * ((limits.width - 80) - 30 )) + 30;

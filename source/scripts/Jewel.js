@@ -23,7 +23,7 @@ export default class Jewel extends Circle {
 	}
 
 	draw(context) {
-		context.drawImage(
+		context.drawImage (
 			this.img,
 			this.cellX * this.cellWidth,
 			0,

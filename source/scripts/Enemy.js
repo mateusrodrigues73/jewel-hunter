@@ -31,7 +31,7 @@ export default class Enemy extends Circle {
 	}
 
 	draw(context) {
-		context.drawImage(
+		context.drawImage (
 			this.img,
 			this.cellX * this.cellWidth,
 			0,
@@ -56,7 +56,7 @@ export default class Enemy extends Circle {
 			this.y = 30;
 			this.x = Math.random() * ((limits.width - 80) - 30 ) + 30;
 			this.hurtbox.x = this.x + this.width / 2;
-			this.hurtbox.y = 30 + this.height / 2;
+			this.hurtbox.y = this.y + this.height / 2;
 			this.speed = Math.floor(Math.random() * (6 - 3)) + 3;
 		}
 	}

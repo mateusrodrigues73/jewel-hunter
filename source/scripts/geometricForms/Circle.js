@@ -10,14 +10,15 @@ export default class Circle {
   }
 
   drawCircle (context) {
-    this.circle(
+    this.circle (
       context,
       this.x,
       this.y,
       this.size,
       this.line,
       this.color,
-      this.color);
+      this.color
+		);
   } 
 
   circle (context, x, y, radius, line, color, fill = false) {
@@ -34,7 +35,8 @@ export default class Circle {
 
   colision(object) {
 		return (
-			this.hurtbox.size + object.size >= Math.sqrt((this.hurtbox.x - object.x) ** 2 + (this.hurtbox.y - object.y) ** 2)
+			this.hurtbox.size + object.size >= 
+			Math.sqrt((this.hurtbox.x - object.x) ** 2 + (this.hurtbox.y - object.y) ** 2)
 		);
 	}
 }

@@ -17,7 +17,7 @@ export default class Hero extends Circle {
 		this.cellX = 0;
 		this.totalSprites = 3;
 		this.img = img;
-		this.cellWidth = img.naturalWidth/this.totalSprites;
+		this.cellWidth = img.naturalWidth / this.totalSprites;
 		this.heroSpeed = 1;
 		this.width = width;
 		this.height = height;

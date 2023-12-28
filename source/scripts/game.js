@@ -25,7 +25,7 @@ let retry = false;
 let score = 0;
 let gameOver = false;
 const frames = 60;
-const totalEnemies = 5;
+const totalEnemies = 4;
 let enemies = Array.from({length: totalEnemies});
 
 const init = async() => {
